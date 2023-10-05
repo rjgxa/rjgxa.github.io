@@ -10,7 +10,7 @@
 10
 样例输出：
 37913根据题目描述，我们可以得到以下代码。
-1234567891011121">
+#include&amp;lt;iost">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -425,7 +425,27 @@
 <p>10</p>
 <p>样例输出：</p>
 <p>37913<br>根据题目描述，我们可以得到以下代码。</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">	<span class="type">int</span> i, j;</span><br><span class="line">	<span class="type">int</span> x;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> fac = <span class="number">1</span>;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> MOD = <span class="number">1000000</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= x; i++) {</span><br><span class="line">		fac = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= i; j++) {</span><br><span class="line">			fac=(fac * j)%MOD;</span><br><span class="line">		}</span><br><span class="line">		sum = (sum + fac)%MOD;</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	<span class="comment">//测试时间</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"time used=%.2f\n"</span>, <span class="type">double</span>(clock()/CLOCKS_PER_SEC));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;ctime&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> x<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> fac <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">int</span> MOD <span class="token operator">=</span> <span class="token number">1000000</span><span class="token punctuation">;</span>
+	cin <span class="token operator">&gt;&gt;</span> x<span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> x<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fac <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			fac<span class="token operator">=</span><span class="token punctuation">(</span>fac <span class="token operator">*</span> j<span class="token punctuation">)</span><span class="token operator">%</span>MOD<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		sum <span class="token operator">=</span> <span class="token punctuation">(</span>sum <span class="token operator">+</span> fac<span class="token punctuation">)</span><span class="token operator">%</span>MOD<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//测试时间</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"time used=%.2f\n"</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token function">clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span>CLOCKS_PER_SEC<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>要计算只包含加法、减法、乘法的整数表达式除以正整数n的余数，可以在每一步计算时对n取余，结果不变。<br>可以使用time函数获得程序运行的时间，常数CLOCKS_PER_SEC和操作系统相关，请不要使用clock()的返回值。而应该总是除以CLOCKS_PER_SEC。</p>
 
                 

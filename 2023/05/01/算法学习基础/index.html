@@ -418,7 +418,18 @@
             <div id="articleContent">
                 <h3 id="算法的时间复杂性分析"><a href="#算法的时间复杂性分析" class="headerlink" title="算法的时间复杂性分析"></a>算法的时间复杂性分析</h3><p>为什么要进行时间复杂度分析呢？<br>算法的核心就是效率。因为算法就是解决问题的方法，而这个方法的快慢是非常重要的。试想一下计算一道题，一个算法用了5分钟，而另一个算法用了1年。哪个算法好，你觉得呢？</p>
 <h3 id="什么是输入规模和基本语句"><a href="#什么是输入规模和基本语句" class="headerlink" title="什么是输入规模和基本语句"></a>什么是输入规模和基本语句</h3><p>输入量：输入量的多少<br>基本语句：是指执行次数与整个算法的执行次数成正比的语句。<br>是算法中最重要的操作。</p>
-<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">···</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++){</span><br><span class="line">    <span class="keyword">if</span>(A[i]==k){</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(i==n){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> (i+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c">···
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>k<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>请找出输入规模和基本语句。</p>
 <h3 id="算法的渐进分析"><a href="#算法的渐进分析" class="headerlink" title="算法的渐进分析"></a>算法的渐进分析</h3>
                 
