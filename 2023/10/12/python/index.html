@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阶乘之和, 人皆鬼雄,袁欢">
-    <meta name="description" content="题目描述输入n， 计算S＝1！＋ 2！＋ 3！＋ …＋ n！的末6位（ 不含前导0 ）n≤10^6， n!表示前n个正整数之积。
-样例输入：
-10
-样例输出：
-37913根据题目描述，我们可以得到以下代码。
-#include&amp;lt;iost">
+    <meta name="keywords" content="人皆鬼雄,袁欢">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阶乘之和 | RJGX&#39;Blog</title>
+    <title>RJGX&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -279,12 +274,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">阶乘之和</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -308,8 +303,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">C语言算法基础</span>
+                            <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">python基础</span>
                             </a>
                         
                     </div>
@@ -320,8 +315,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                C语言
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -333,21 +328,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-01
+                    2023-10-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-04
+                    2023-10-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    225
+                    0
                 </div>
                 
 
@@ -377,34 +372,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入n， 计算S＝1！＋ 2！＋ 3！＋ …＋ n！的末6位（ 不含前导0 ）n≤10^6， n!表示前n个正整数之积。</p>
-<p>样例输入：</p>
-<p>10</p>
-<p>样例输出：</p>
-<p>37913<br>根据题目描述，我们可以得到以下代码。</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;ctime&gt;</span></span>
-using namespace std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
-	<span class="token keyword">int</span> x<span class="token punctuation">;</span>
-	<span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token keyword">int</span> fac <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-	<span class="token keyword">const</span> <span class="token keyword">int</span> MOD <span class="token operator">=</span> <span class="token number">1000000</span><span class="token punctuation">;</span>
-	cin <span class="token operator">&gt;&gt;</span> x<span class="token punctuation">;</span>
-	<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> x<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		fac <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-		<span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-			fac<span class="token operator">=</span><span class="token punctuation">(</span>fac <span class="token operator">*</span> j<span class="token punctuation">)</span><span class="token operator">%</span>MOD<span class="token punctuation">;</span>
-		<span class="token punctuation">}</span>
-		sum <span class="token operator">=</span> <span class="token punctuation">(</span>sum <span class="token operator">+</span> fac<span class="token punctuation">)</span><span class="token operator">%</span>MOD<span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token comment">//测试时间</span>
-	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"time used=%.2f\n"</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token function">clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span>CLOCKS_PER_SEC<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>要计算只包含加法、减法、乘法的整数表达式除以正整数n的余数，可以在每一步计算时对n取余，结果不变。<br>可以使用time函数获得程序运行的时间，常数CLOCKS_PER_SEC和操作系统相关，请不要使用clock()的返回值。而应该总是除以CLOCKS_PER_SEC。</p>
-
+                
                 
             </div>
             <hr/>
@@ -430,7 +398,7 @@ using namespace std<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mysourcecoding.github.io/2023/05/01/%E9%98%B6%E4%B9%98%E4%B9%8B%E5%92%8C/">https://mysourcecoding.github.io/2023/05/01/%E9%98%B6%E4%B9%98%E4%B9%8B%E5%92%8C/</a>
+                    <a href="https://mysourcecoding.github.io/2023/10/12/python/">https://mysourcecoding.github.io/2023/10/12/python/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -468,8 +436,8 @@ using namespace std<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">C语言算法基础</span>
+                                <a href="/tags/python%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">python基础</span>
                                 </a>
                             
                         </div>
@@ -548,9 +516,10 @@ using namespace std<span class="token punctuation">;</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/10/12/python/">
                     <div class="card-image">
@@ -568,9 +537,9 @@ using namespace std<span class="token punctuation">;</span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -583,6 +552,7 @@ using namespace std<span class="token punctuation">;</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -601,13 +571,13 @@ using namespace std<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/01/%E8%BF%91%E4%BC%BC%E8%AE%A1%E7%AE%97/">
+                <a href="/2023/05/01/%E9%98%B6%E4%B9%98%E4%B9%8B%E5%92%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="近似计算">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="阶乘之和">
                         
-                        <span class="card-title">近似计算</span>
+                        <span class="card-title">阶乘之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

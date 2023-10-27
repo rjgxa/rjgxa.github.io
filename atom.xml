@@ -6,7 +6,7 @@
   <link href="https://mysourcecoding.github.io/atom.xml" rel="self"/>
   
   <link href="https://mysourcecoding.github.io/"/>
-  <updated>2023-10-04T13:04:19.170Z</updated>
+  <updated>2023-10-12T02:44:09.664Z</updated>
   <id>https://mysourcecoding.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://mysourcecoding.github.io/2023/10/12/python/"/>
+    <id>https://mysourcecoding.github.io/2023/10/12/python/</id>
+    <published>2023-10-12T02:31:15.000Z</published>
+    <updated>2023-10-12T02:44:09.664Z</updated>
+    
+    
+    
+    
+    <category term="Python" scheme="https://mysourcecoding.github.io/categories/Python/"/>
+    
+    
+    <category term="python基础" scheme="https://mysourcecoding.github.io/tags/python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>阶乘之和</title>
