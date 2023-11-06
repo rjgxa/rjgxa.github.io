@@ -949,23 +949,57 @@
             <!-- 运行天数提醒. -->
             
                 <span id="sitetime"> Loading ...</span>
-                <script type="text/javascript">			
-                    function show_runtime() {
-                        window.setTimeout("show_runtime()", 1000);
-                        X = new Date("05/11/2023 23:10:00");
-                        Y = new Date();
-                        T = (Y.getTime() - X.getTime());
-                        M = 24 * 60 * 60 * 1000;
-                        a = T / M;
-                        Day = Math.floor(a);
-                        b = (a - A) * 24;
-                        Hours = Math.floor(b);
-                        c = (b - B) * 60;
-                        Minutes = Math.floor((b - B) * 60);
-                        D = Math.floor((c - C) * 60);
-                        runtime_span.innerHTML = "小站于各种崩坏中续存了: " + Day + "天" + Hours + "小时" + Minutes + "分" + Seconds + "秒"
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "11";
+                        var startDate = "06";
+                        var startHour = "23";
+                        var startMinute = "15";
+                        var startSecond = "00";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
                     }
-                    show_runtime();
+
+                    calcSiteTime();
                 </script>
             
             <br>
